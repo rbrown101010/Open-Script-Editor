@@ -10,10 +10,18 @@ export const HOST = process.env.HOST ?? "127.0.0.1";
 export const PORT = Number(process.env.PORT ?? 4317);
 fs.mkdirSync(DATA_DIR, { recursive: true });
 
-export const projectDir = (id: string) => path.join(DATA_DIR, safeId(id));
-export const mediaDir = (id: string) => path.join(projectDir(id), "media");
-export const exportsDir = (id: string) => path.join(projectDir(id), "exports");
-export const cacheDir = (id: string) => path.join(projectDir(id), "cache");
+/** Resolve a path under the data dir, refusing anything that escapes it. */
+export function inData(...parts: string[]): string {
+  const base = path.resolve(DATA_DIR);
+  const full = path.resolve(base, ...parts);
+  if (full !== base && !full.startsWith(base + path.sep)) throw new Error("Path escapes data directory");
+  return full;
+}
+
+export const projectDir = (id: string) => inData(safeId(id));
+export const mediaDir = (id: string) => inData(safeId(id), "media");
+export const exportsDir = (id: string) => inData(safeId(id), "exports");
+export const cacheDir = (id: string) => inData(safeId(id), "cache");
 
 export function safeId(id: string): string {
   if (!/^[a-zA-Z0-9_-]+$/.test(id)) throw new Error("Bad id");

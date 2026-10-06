@@ -260,7 +260,8 @@ async function layerSource(
   return null;
 }
 
-const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const esc = (s: string) =>
+  String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 
 /** Rasterize a text layer to exactly its box size so preview and export match. */
 export function renderTextPng(layer: Layer, W: number, H: number): Buffer {
