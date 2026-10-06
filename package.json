@@ -1,9 +1,9 @@
 {
-  "name": "open-descript",
+  "name": "open-script-editor",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Open-source, local, text-based audio/video editor in the style of Descript's classic editor. Edit video by editing the transcript.",
+  "description": "Open-source, local, text-based audio/video editor. Edit video by editing the transcript.",
   "scripts": {
     "dev": "tsx scripts/dev.ts",
     "build": "vite build",
@@ -33,14 +33,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rbrown101010/open-descript.git"
+    "url": "https://github.com/rbrown101010/Open-Script-Editor.git"
   },
   "keywords": [
     "video-editor",
     "transcript",
     "whisper",
     "ffmpeg",
-    "descript",
     "text-based-editing",
     "ai-agents"
   ],

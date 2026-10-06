@@ -1,4 +1,4 @@
-# Open Descript: Plan
+# Open Script Editor: Plan
 
 A local, dark-mode, text-based video editor modeled on Descript's classic editor:
 you edit the video by editing its transcript. Everything runs on this Mac
@@ -9,7 +9,7 @@ can edit videos through the same path the UI uses.
 ## 1. What we're cloning (research summary)
 
 These notes come from Descript's help center (help.descript.com, current and archived
-2021–2024 pages). The full notes with sources are in `docs/descript-research.md`.
+2021–2024 pages). The full notes with sources are in `docs/ux-research.md`.
 
 | Descript concept | How it works in Descript | Our version |
 | --- | --- | --- |

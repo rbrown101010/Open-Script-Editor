@@ -366,7 +366,7 @@ for (const p of store.list()) {
 
 app.listen(PORT, HOST, () => {
   const model = findWhisperModel();
-  console.log(`\n  Open Descript server  http://localhost:${PORT}`);
+  console.log(`\n  Open Script Editor server  http://localhost:${PORT}`);
   console.log(`  Data:    ${DATA_DIR}`);
   console.log(`  Whisper: ${model ?? "NO MODEL FOUND (run npm run setup)"}\n`);
 });

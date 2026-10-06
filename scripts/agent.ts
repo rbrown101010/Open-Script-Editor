@@ -8,7 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const BASE = process.env.OPEN_DESCRIPT_URL ?? `http://localhost:${process.env.PORT ?? 4317}`;
+const BASE = process.env.SCRIPT_EDITOR_URL ?? `http://localhost:${process.env.PORT ?? 4317}`;
 const [cmd, ...args] = process.argv.slice(2);
 
 async function call(method: string, url: string, body?: unknown) {

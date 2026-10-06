@@ -1,6 +1,6 @@
-# Open Descript
+# Open Script Editor
 
-An open-source, local, **text-based video editor** in the style of Descript's classic editor.
+An open-source, local, **text-based video editor**.
 Drop in a video and it's transcribed on your machine with Whisper. Then you edit the video by editing the text.
 
 - **Delete words → delete video.** Removed words stay visible as strikethrough (toggle to hide).
@@ -18,14 +18,14 @@ Everything runs locally. No account, no API keys, no uploads.
 
 ```bash
 brew install ffmpeg whisper-cpp
-git clone https://github.com/rbrown101010/open-descript.git
-cd open-descript
+git clone https://github.com/rbrown101010/Open-Script-Editor.git
+cd Open-Script-Editor
 npm install
 npm run setup     # downloads a Whisper model (ggml-small.en, ~470 MB) if you don't have one
 npm start         # http://localhost:4317
 ```
 
-Or double-click **Start Open Descript.command**. For development, `npm run dev` serves the UI with
+Or double-click **Start Open Script Editor.command**. For development, `npm run dev` serves the UI with
 hot reload on http://localhost:5173.
 
 Linux works too if `ffmpeg` and whisper.cpp's `whisper-cli` are on your PATH.
@@ -34,7 +34,7 @@ Linux works too if `ffmpeg` and whisper.cpp's `whisper-cli` are on your PATH.
 | --- | --- | --- |
 | `WHISPER_MODEL` | first `ggml-*.bin` in `./models` or `~/.cache/whisper` | Whisper model file |
 | `WHISPER_CLI` | `whisper-cli` | whisper.cpp binary |
-| `OPEN_DESCRIPT_DATA` | `./projects` | Where projects and exports are stored |
+| `SCRIPT_EDITOR_DATA` | `./projects` | Where projects and exports are stored |
 | `PORT` / `HOST` | `4317` / `127.0.0.1` | Server address (keep it on loopback; see [SECURITY.md](SECURITY.md)) |
 
 ## Keyboard
@@ -70,9 +70,9 @@ Issues and PRs are welcome. Run `npm run typecheck && npm test` before opening a
 
 ## Disclaimer
 
-Open Descript is an independent open-source project. It is not affiliated with, endorsed by, or
-connected to Descript, Inc. "Descript" is a trademark of its owner and is used here only to describe
-the editing style this project is inspired by.
+Open Script Editor is an independent open-source project. Its editing model is inspired by
+transcript-based editors such as Descript's classic editor; it is not affiliated with or endorsed by
+Descript, Inc. "Descript" is a trademark of its owner.
 
 ## License
 

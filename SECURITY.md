@@ -1,6 +1,6 @@
 # Security
 
-Open Descript is a **local, single-user app**. Its API has no login and can read
+Open Script Editor is a **local, single-user app**. Its API has no login and can read
 media files from your disk, so it is built to be reachable only from your own machine.
 
 ## How it protects you

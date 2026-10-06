@@ -4,7 +4,7 @@ import os from "node:os";
 import { fileURLToPath } from "node:url";
 
 export const APP_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-export const DATA_DIR = process.env.OPEN_DESCRIPT_DATA ?? path.join(APP_ROOT, "projects");
+export const DATA_DIR = process.env.SCRIPT_EDITOR_DATA ?? path.join(APP_ROOT, "projects");
 /** Bind to loopback only by default: this server has no auth and can read local files. */
 export const HOST = process.env.HOST ?? "127.0.0.1";
 export const PORT = Number(process.env.PORT ?? 4317);

@@ -50,7 +50,7 @@ export function Home() {
     >
       <header className="home-head">
         <div className="logo">
-          <span className="logo-mark" /> Open Descript
+          <span className="logo-mark" /> Open Script Editor
         </div>
         <button className="btn primary" onClick={pick}>
           <Icon name="plus" /> New project
