@@ -1,0 +1,50 @@
+{
+  "name": "open-descript",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Open-source, local, text-based audio/video editor in the style of Descript's classic editor. Edit video by editing the transcript.",
+  "scripts": {
+    "dev": "tsx scripts/dev.ts",
+    "build": "vite build",
+    "start": "vite build && NODE_ENV=production tsx server/index.ts",
+    "serve": "NODE_ENV=production tsx server/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/core/*.test.ts",
+    "agent": "tsx scripts/agent.ts",
+    "setup": "bash scripts/setup.sh"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "express": "^4.21.2",
+    "tsx": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rbrown101010/open-descript.git"
+  },
+  "keywords": [
+    "video-editor",
+    "transcript",
+    "whisper",
+    "ffmpeg",
+    "descript",
+    "text-based-editing",
+    "ai-agents"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}
